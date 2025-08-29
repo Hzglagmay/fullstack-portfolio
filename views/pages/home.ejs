@@ -2,7 +2,7 @@
 <div class="shell">
   <section class="grid hero">
     <div class="card hero-left">
-      <div class="avatar"></div>
+      <div class="avatar" style="background-image: url('/img/1.jpg'); background-size: cover; background-position: center;"></div>
       <h2>Hans Lagmay</h2>
       <div class="role">Developer</div>
       <div class="langs">
@@ -14,18 +14,13 @@
 
     <div class="card hero-card">
       <h1 class="hero-title">
-        <% (site?.hero?.title||[]).forEach(function(t){ %>
-          <span><%= t %></span>
-        <% }) %>
+        <%= (site?.hero?.title||[]).join(' ') %>
       </h1>
 
-      <!-- crawl intro INSIDE card, below the title -->
-      <div class="crawl-holder" aria-hidden="true">
-        <div class="crawl" role="region" aria-label="Welcome message">
-          <% (site?.hero?.crawl||[]).forEach(function(line){ %>
-            <p><%= line %></p>
-          <% }) %>
-        </div>
+      <!-- Replace crawl with meaningful intro -->
+      <div class="intro-text">
+        <p>Welcome! I'm Hans Lagmay, a passionate 3rd year BS IT student who enjoys turning creative ideas into functional, user-friendly software solutions.</p>
+        <p>I specialize in web development and UI/UX design, focusing on building clean, efficient, and visually appealing digital experiences.</p>
       </div>
 
       <div class="actions">
@@ -36,10 +31,10 @@
   </section>
 
   <section class="stats grid">
-    <div class="stat card"><div class="num">3</div><div class="label">Years<br/>Experience<br/>(and counting)</div></div>
-    <div class="stat card"><div class="num">269</div><div class="label">ChatGPT<br/>Prompts</div></div>
-    <div class="stat card"><div class="num">128</div><div class="label">trashtalked ai</div></div>
-    <div class="stat card"><div class="num">0</div><div class="label">Honors & Awards</div></div>
+    <div class="stat card"><div class="num">4</div><div class="label">Years<br/>Experience<br/>(and counting)</div></div>
+    <div class="stat card"><div class="num">15</div><div class="label">Projects<br/>Completed</div></div>
+    <div class="stat card"><div class="num">850+</div><div class="label">GitHub<br/>Commits</div></div>
+    <div class="stat card"><div class="num">12</div><div class="label">Technologies<br/>Mastered</div></div>
   </section>
 
   <section class="services grid">

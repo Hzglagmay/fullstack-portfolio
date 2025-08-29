@@ -2,36 +2,27 @@
 <div class="shell">
   <section class="page-header">
     <h1>My Projects</h1>
-    <p>A few school builds and experiments. More to come.</p>
+    <p>A collection of academic projects, personal experiments, and upcoming developments.</p>
   </section>
 
   <section class="projects-grid">
   <% (projects||[]).forEach(function(p){ %>
     <article class="proj card <%= p.soon?'soon':'' %>">
       <div class="icon">
-        <% if(p.icon==='computer'){ %>💻<% } else if(p.icon==='github'){ %>🐙<% } else if(p.icon==='doc'){ %>📄<% } else { %>➕<% } %>
+        <% if(p.icon==='computer'){ %>💻<% } else if(p.icon==='github'){ %>⚡<% } else if(p.icon==='doc'){ %>📊<% } else { %>➕<% } %>
       </div>
       <h3><%= p.title %></h3>
       <% if(p.year){ %><div class="year"><%= p.year %></div><% } %>
-      <div class="actions"><a class="btn" href="<%= p.cta.href %>"><%= p.cta.text %></a></div>
+      <% if(p.soon){ %><p style="color: var(--muted); margin: 4px 0;">In development...</p><% } %>
+      <div class="actions">
+        <% if(p.soon){ %>
+          <span class="btn coming-soon">Coming Soon</span>
+        <% } else { %>
+          <a class="btn" href="<%= p.cta.href %>" target="_blank"><%= p.cta.text %></a>
+        <% } %>
+      </div>
     </article>
   <% }) %>
-  </section>
-
-  <section class="projects-grid">
-    <!-- two consistent Coming Soon blocks to fill the row -->
-    <article class="proj card soon">
-      <div class="icon">➕</div>
-      <h3>Coming Soon</h3>
-      <p>More projects will be added.</p>
-      <div class="actions"><a class="btn" href="#">Coming Soon</a></div>
-    </article>
-    <article class="proj card soon">
-      <div class="icon">➕</div>
-      <h3>Coming Soon</h3>
-      <p>More projects will be added.</p>
-      <div class="actions"><a class="btn" href="#">Coming Soon</a></div>
-    </article>
   </section>
 </div>
 <%- include('../partials/foot') %>
