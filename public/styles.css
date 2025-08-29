@@ -57,6 +57,13 @@ body.layout{
 .hero__left{background:var(--card); border:1px solid rgba(255,255,255,.06);
   padding:28px;border-radius:16px}
 
+/* Profile avatar */
+.avatar{
+  width:120px;height:120px;border-radius:50%;margin:0 auto 16px;
+  background-image:url('/img/1.jpg');background-size:cover;background-position:center;
+  border:3px solid rgba(255,255,255,.1);
+}
+
 /* STAR WARS CRAWL (right column) */
 .crawl-wrap{
   position:relative;height:360px;overflow:hidden;border-radius:16px;
@@ -91,13 +98,24 @@ body.layout{
 /* PROJECTS */
 .page-head{margin:12px 0 16px}
 .grid{display:grid;gap:16px}
-.projects-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+.projects-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
 .project-card{display:flex;gap:14px;background:var(--card);border:1px solid rgba(255,255,255,.06);
   border-radius:14px;padding:16px}
 .project-card__icon{width:74px;height:74px;border-radius:14px;background:var(--card-2);
   display:grid;place-items:center;border:1px solid rgba(255,255,255,.05)}
 .project-card__icon img{max-width:52px;max-height:52px;filter:drop-shadow(0 8px 20px rgba(0,0,0,.25))}
 .project-card__body h3{margin:.2rem 0 .25rem}
+
+/* Project cards styling */
+.proj.card{
+  background:var(--card);border:1px solid rgba(255,255,255,.06);border-radius:14px;padding:18px;
+  min-height:180px;display:flex;flex-direction:column;
+}
+.proj.card .icon{font-size:2rem;margin-bottom:8px}
+.proj.card h3{margin:0 0 8px 0;font-size:1.1rem}
+.proj.card .year{color:var(--muted);font-size:0.9rem;margin-bottom:auto}
+.proj.card .actions{margin-top:auto}
+.proj.card.soon .icon{opacity:0.6}
 .project-card .preview{margin-top:.6rem}
 .project-card .preview img{width:270px;max-width:100%;border-radius:10px;border:1px solid rgba(255,255,255,.07)}
 .project-card.soon .plus{font-size:1.6rem;color:var(--muted)}

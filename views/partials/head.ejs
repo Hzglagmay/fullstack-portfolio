@@ -4,17 +4,17 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title><%= site?.title || 'My Portfolio' %></title>
-  <link rel="stylesheet" href="/css/style.css"/>
+  <link rel="stylesheet" href="/styles.css"/>
 </head>
-<body>
-  <header class="topbar">
-    <div class="shell">
-      <div class="brand"><a href="/"><%= site?.title || 'My Portfolio' %></a></div>
-      <nav class="nav">
-        <% (nav||[]).forEach(n=>{ %>
-          <a href="<%= n.href %>" class="<%= (request?.url===n.href) ? 'active':'' %>"><%= n.text %></a>
-        <% }) %>
-      </nav>
+<body class="layout">
+  <header class="site-header">
+    <div class="brand">
+      <a href="/"><%= site?.title || 'My Portfolio' %></a>
     </div>
+    <nav>
+      <% (nav||[]).forEach(n=>{ %>
+        <a href="<%= n.href %>" class="<%= (request?.url===n.href) ? 'active':'' %>"><%= n.text %></a>
+      <% }) %>
+    </nav>
   </header>
-  <main class="page">
+  <main class="site-main">

@@ -9,10 +9,8 @@ const app = express();
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 
-// static
-app.use('/css', express.static(path.join(__dirname, 'public/css')));
-app.use('/js', express.static(path.join(__dirname, 'public/js')));
-app.use('/img', express.static(path.join(__dirname, 'public/img')));
+// static files - serve directly from public
+app.use(express.static(path.join(__dirname, 'public')));
 
 // globals so includes like partials/foot.ejs always have 'site' + 'nav'
 app.use((req,res,next)=>{
@@ -34,11 +32,7 @@ app.get('/projects', (req, res) => {
   res.render('pages/projects', { projects });
 });
 
-app.get('/projects/:slug', (req, res) => {
-  const item = projects.find(p => p.slug === req.params.slug);
-  if(!item){ return res.status(404).render('pages/404'); }
-  res.render('pages/project-detail', { item });
-});
+// Project detail route removed - projects now link externally
 
 app.get('/contact', (req, res) => {
   res.render('pages/contact');
