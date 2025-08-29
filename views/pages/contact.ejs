@@ -1,25 +1,36 @@
 <%- include('../partials/head') %>
 <div class="shell">
-  <h1>Contact</h1>
+  <section class="page-header">
+    <h1>Contact Me</h1>
+    <p>Let's connect and discuss potential opportunities or collaborations.</p>
+  </section>
+  
   <section class="grid contact">
     <div class="card">
       <h3>Let's work together</h3>
       <p>Tell me about your goals or a project you want to build.</p>
       <div class="panel">
         <strong>Email</strong>
-        <div>you@example.com</div>
+        <div>hanslagmay.dev@gmail.com</div>
         <div>I usually reply within 24–48 hours.</div>
+      </div>
+      <div class="panel">
+        <strong>GitHub</strong>
+        <div>github.com/Hzglagmay</div>
+        <div>Check out my latest projects and contributions.</div>
       </div>
     </div>
 
     <form class="card form" onsubmit="return false;">
+      <h3>Send a Message</h3>
       <div class="row">
-        <input type="text" placeholder="Name"/>
-        <input type="email" placeholder="Email"/>
+        <input type="text" placeholder="Your Name" required/>
+        <input type="email" placeholder="Your Email" required/>
       </div>
-      <textarea rows="7" placeholder="What's up?"></textarea>
+      <input type="text" placeholder="Subject"/>
+      <textarea rows="7" placeholder="What would you like to discuss?"></textarea>
       <div class="row">
-        <button class="btn primary" type="submit">Send</button>
+        <button class="btn primary" type="submit">Send Message</button>
         <button class="btn" type="reset">Clear</button>
       </div>
     </form>
