@@ -32,7 +32,7 @@ const projects = [
     title: "ITC Final Project",
     year: 2023,
     icon: "github",
-    cta: { text: "View on GitHub", href: "https://github.com/Hzglagmay/itc-final-project" }
+    cta: { text: "View Live", href: "https://hanslagmay.github.io/hzglagmay/" }
   },
   {
     slug: "dsa-final",
@@ -43,7 +43,10 @@ const projects = [
   },
   { slug: "soon-1", title: "E-Commerce App", year: "", icon: "plus", cta: { text: "Coming Soon", href: "#" }, soon: true },
   { slug: "soon-2", title: "Mobile Game", year: "", icon: "plus", cta: { text: "Coming Soon", href: "#" }, soon: true },
-  { slug: "soon-3", title: "AI Chat Bot", year: "", icon: "plus", cta: { text: "Coming Soon", href: "#" }, soon: true }
+  { slug: "soon-3", title: "AI Chat Bot", year: "", icon: "plus", cta: { text: "Coming Soon", href: "#" }, soon: true },
+  { slug: "soon-4", title: "Machine Learning App", year: "", icon: "plus", cta: { text: "Coming Soon", href: "#" }, soon: true },
+  { slug: "soon-5", title: "React Native App", year: "", icon: "plus", cta: { text: "Coming Soon", href: "#" }, soon: true },
+  { slug: "soon-6", title: "Desktop Application", year: "", icon: "plus", cta: { text: "Coming Soon", href: "#" }, soon: true }
 ];
 
 module.exports = { site, nav, projects };
