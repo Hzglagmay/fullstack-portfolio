@@ -1,0 +1,33 @@
+
+/* S1 variant: mouse splash gradient background */
+:root{
+  --s1-a:#ff4d6d;
+  --s1-b:#4f46e5;
+  --s1-c:#0ea5e9;
+  --s1-bg:#0b0f19;
+}
+.s1-root{min-height:100vh; position:relative; color:#e6edf6}
+.s1-bg{
+  position:fixed; inset:0;
+  background:
+    radial-gradient(600px circle at var(--mx,50%) var(--my,50%), rgba(255,77,109,.45), transparent 60%),
+    radial-gradient(700px circle at calc(var(--mx,50%) + 20%) calc(var(--my,50%) - 10%), rgba(79,70,229,.35), transparent 60%),
+    linear-gradient(120deg, rgba(14,165,233,.15), rgba(255,255,255,0) 40%),
+    var(--s1-bg);
+  filter: saturate(110%);
+  transition: background .08s ease;
+  pointer-events:none;
+}
+.s1-nav{
+  position:relative; z-index:2; display:flex; justify-content:space-between; align-items:center;
+  padding:22px clamp(16px, 6vw, 48px);
+}
+.s1-nav .brand{font-weight:700; letter-spacing:.4px}
+.s1-hero{position:relative; z-index:1; display:grid; place-items:center; padding: min(18vh, 180px) 24px}
+.s1-hero .content{max-width: 920px; text-align:left}
+.s1-hero h1{font-size: clamp(28px, 4vw, 48px); line-height:1.25; margin:0 0 12px}
+.s1-hero .lead{font-size: clamp(16px, 1.4vw, 20px); color:#b8c7e0; margin:0 0 20px}
+.actions{display:flex; gap:12px}
+.btn{padding:10px 14px; border-radius:12px; border:1px solid rgba(255,255,255,.12); background:rgba(255,255,255,.06); color:#e6edf6; text-decoration:none}
+.btn.primary{background:linear-gradient(90deg, var(--s1-a), var(--s1-c)); color:#0b1220; border-color:transparent}
+.btn.secondary:hover{background:rgba(255,255,255,.1)}

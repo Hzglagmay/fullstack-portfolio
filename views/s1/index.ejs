@@ -1,0 +1,30 @@
+
+<%- include('../partials/head') %>
+<style>
+  @import url('/s1.css');
+</style>
+<main class="s1-root">
+  <div class="s1-bg" aria-hidden="true"></div>
+  <header class="s1-nav">
+    <div class="brand">Hans Lagmay</div>
+    <nav>
+      <a href="/" class="nav-link">Home</a>
+      <a href="/about" class="nav-link">About</a>
+      <a href="/projects" class="nav-link">Projects</a>
+      <a href="/contact" class="nav-link">Contact</a>
+    </nav>
+  </header>
+
+  <section class="s1-hero">
+    <div class="content">
+      <h1>Hello, world! I’m Hans, a 3rd year BS IT student who enjoys building useful tools and playful interactions.</h1>
+      <p class="lead">I like clean UI, small animations, and exploring new tech to tell tiny stories on the web.</p>
+      <div class="actions">
+        <a class="btn primary" href="/projects">See Projects</a>
+        <a class="btn secondary" href="/contact">Say Hello</a>
+      </div>
+    </div>
+  </section>
+</main>
+<script src="/s1.js" defer></script>
+<%- include('../partials/footer') %>

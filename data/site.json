@@ -1,0 +1,31 @@
+{
+  "title": "My Portfolio",
+  "owner": {
+    "name": "Hans Lagmay",
+    "role": "Developer"
+  },
+  "stats": {
+    "experience_years": 3,
+    "prompts": 269,
+    "trashtalked_ai": 1,
+    "honors": 0
+  },
+  "nav": [
+    {
+      "href": "/",
+      "label": "Home"
+    },
+    {
+      "href": "/about",
+      "label": "About"
+    },
+    {
+      "href": "/projects",
+      "label": "Projects"
+    },
+    {
+      "href": "/contact",
+      "label": "Contact"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title><%= site.owner %> | <%= (page==='home'?'My Portfolio':page.charAt(0).toUpperCase()+page.slice(1)) %></title>
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+  <div id="glow"></div>
+  <%- include('../partials/nav',{site, page}) %>
+  <main class="container">
+    <%- body %>
+  </main>
+  <%- include('../partials/footer',{site}) %>
+  <script src="/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+{
+  "name": "portfolio-v32r-hotfix2",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Portfolio EJS/Express - stable hotfix with global locals to prevent 'site is not defined' and compact projects grid.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "ejs": "^3.1.9",
+    "express": "^4.19.2"
+  }
+}

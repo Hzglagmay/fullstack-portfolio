@@ -1,0 +1,56 @@
+<%- include('../partials/head') %>
+<div class="shell">
+  <section class="grid hero">
+    <div class="card hero-left">
+      <div class="avatar"></div>
+      <h2>Hans Lagmay</h2>
+      <div class="role">Developer</div>
+      <div class="langs">
+        <span class="chip">EN</span><span class="chip">PH</span>
+      </div>
+      <div class="skill"><label>Java</label><div class="bar"><span style="width:65%"></span></div></div>
+      <div class="skill"><label>Python</label><div class="bar"><span style="width:55%"></span></div></div>
+    </div>
+
+    <div class="card hero-card">
+      <h1 class="hero-title">
+        <% (site?.hero?.title||[]).forEach(function(t){ %>
+          <span><%= t %></span>
+        <% }) %>
+      </h1>
+
+      <!-- crawl intro INSIDE card, below the title -->
+      <div class="crawl-holder" aria-hidden="true">
+        <div class="crawl" role="region" aria-label="Welcome message">
+          <% (site?.hero?.crawl||[]).forEach(function(line){ %>
+            <p><%= line %></p>
+          <% }) %>
+        </div>
+      </div>
+
+      <div class="actions">
+        <a href="/projects" class="btn primary">Explore Now</a>
+        <a href="/contact" class="btn">Contact</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="stats grid">
+    <div class="stat card"><div class="num">3</div><div class="label">Years<br/>Experience<br/>(and counting)</div></div>
+    <div class="stat card"><div class="num">269</div><div class="label">ChatGPT<br/>Prompts</div></div>
+    <div class="stat card"><div class="num">128</div><div class="label">trashtalked ai</div></div>
+    <div class="stat card"><div class="num">0</div><div class="label">Honors & Awards</div></div>
+  </section>
+
+  <section class="services grid">
+    <div class="service card">
+      <h3>Web Development</h3>
+      <p>Website creation.</p>
+    </div>
+    <div class="service card">
+      <h3>UI/UX</h3>
+      <p>Website creation.</p>
+    </div>
+  </section>
+</div>
+<%- include('../partials/foot') %>

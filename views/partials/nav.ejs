@@ -1,0 +1,10 @@
+<header class="navwrap">
+  <nav class="container nav">
+    <a class="brand" href="/">My Portfolio</a>
+    <ul>
+      <% site.nav.forEach(n=>{ %>
+        <li><a href="<%= n.href %>" class="<%= page===n.label.toLowerCase()?'active':'' %>"><%= n.label %></a></li>
+      <% }) %>
+    </ul>
+  </nav>
+</header>
